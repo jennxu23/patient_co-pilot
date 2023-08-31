@@ -14,13 +14,17 @@ def get_response():
     message_placeholder = st.empty()
     full_response = ""
     messages = [{"role": "system", "content": CONTENT}] + [{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
-    for response in openai.ChatCompletion.create(
-        model=st.session_state["openai_model"],
-        messages= messages,
-        stream=True,
-    ):
-        full_response += response.choices[0].delta.get("content", "")
-        message_placeholder.markdown(full_response + "▌")
+    if "surgery" in st.session_state:
+        for response in openai.ChatCompletion.create(
+            model=st.session_state["openai_model"],
+            messages= messages,
+            stream=True,
+        ):
+            full_response += response.choices[0].delta.get("content", "")
+            message_placeholder.markdown(full_response + "▌")
+    else:
+        st.session_state["surgery"] = messages[-1]['content']
+        full_response = f'Thank you! You replied {st.session_state["surgery"]}'
     message_placeholder.markdown(full_response)
     return full_response
 
@@ -30,7 +34,9 @@ def main():
 
     # load previous messages, or empty list if there are no previous messages
     if "messages" not in st.session_state:
-        st.session_state.messages = []
+        st.session_state.messages = [{"role": "assistant", "content":"Hi! I'm Patient Co-Pilot. What is your surgery?"}]
+
+
 
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
