@@ -7,7 +7,7 @@ from streamlit_chat import message
 st.title('Patient Co-Pilot 🩺')
 st.write('Patient Co-Pilot is a chatbot that supports patients with their upcoming surgeries. It can answer any questions regarding pre-operative and post-operative care.')
 
-openai.api_key = os.environ.get('OPENAI_KEY')
+openai.api_key = os.environ.get('OPENAI-KEY')
 
 CONTENT = open('resources/system_prompt.txt', 'r').read()
 
