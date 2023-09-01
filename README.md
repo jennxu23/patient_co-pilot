@@ -1,4 +1,12 @@
 # Patient Co-Pilot
-To set up the conda environment, run `conda env create -f environment.yml`.
+## Setting up the environment
+To set up the environment, first create the environment: `conda create --name op_assistant`.
+Then, activate the environment with `conda activate op_assistant`.
+Then, to install the necessary packages, run `pip install requirements.txt`.
+This app requires an OpenAI API key to run. To connect the app to your OpenAI Key, run `export OPENAI_KEY = <your_key>` in your terminal.
 
-Once you get the environment set up, run `streamlit run home_page.py ` to run the app.
+## Running the app
+Once you get the environment set up, run `streamlit run home_page.py ` to run the app. The app will prompt you to enter a surgery. The resources page will populate with information about your surgery, and then you can use the chatbot to learn more about your surgery.
+
+## Collaborators
+Mishaal Ali M.D, Kate Callon, Jennifer Xu, Edward Yap M.D
