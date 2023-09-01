@@ -4,7 +4,8 @@ import openai
 import pandas as pd
 from streamlit_chat import message
 
-st.title('Op Assistant')
+st.title('Patient Co-Pilot 🩺')
+st.write('Patient Co-Pilot is a chatbot that supports patients with their upcoming surgeries. It can answer any questions regarding pre-operative and post-operative care.')
 
 openai.api_key = os.environ['OPENAI_KEY']
 
@@ -24,7 +25,7 @@ def get_response():
             message_placeholder.markdown(full_response + "▌")
     else:
         st.session_state["surgery"] = messages[-1]['content']
-        full_response = f'Thank you! You replied {st.session_state["surgery"]}'
+        full_response = f'Thank you! You replied {st.session_state["surgery"]}. Do you have questions about this surgery?'
     message_placeholder.markdown(full_response)
     return full_response
 
