@@ -17,7 +17,7 @@ else:
     st.write("Laparoscopic appendectomy: The appendix is removed using tools through small incisions in the lower right abdomen.")
     st.write("Open appendectomy: the appendix is removed through an incision in the abdomen.")
     st.write("It is important to note that if appendicitis is left untreated and the appendix ruptures, it can lead to more serious complications. A ruptured appendix may occur in up to 32 percent of patients with acute appendicitis.")
-    image = Image.open('images/appendectomy/appendectomy2.png')
+    image = Image.open('images/appendectomy/appendectomy.png')
     st.image(image, caption='Visual of Laparoscopic vs Open Appendectomy')
     st.header("What is a laparoscopic appendectomy? ")
     st.write("Laparoscopic appendectomy is a minimally invasive surgical technique used to remove the appendix.")
