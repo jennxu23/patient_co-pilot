@@ -9,4 +9,4 @@ This app requires an OpenAI API key to run. To connect the app to your OpenAI Ke
 Once you get the environment set up, run `streamlit run home_page.py ` to run the app. The app will prompt you to enter a surgery. The resources page will populate with information about your surgery, and then you can use the chatbot to learn more about your surgery.
 
 ## Collaborators
-Mishaal Ali M.D, Kate Callon, Jennifer Xu, Edward Yap M.D
+Mishaal Ali MD, Kate Callon, Jennifer Xu, Edward Yap MD
