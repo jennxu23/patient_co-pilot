@@ -1,7 +1,7 @@
 # Patient Co-Pilot
 Patient Co-Pilot is a tool intended to help guide patients through their surgery. It uses the ChatGPT API, combined with a specific prompt, to leverage LLMs to answer patient questions about their surgeries. It also includes static informational text and images tailored to the patients' surgery. Patient Co-Pilot is intended to be a helpful tool to streamline communication between patients and doctors. 
 
-Winner of the August 2023 Health Universe Hackathon
+Winner of the [August 2023 Health Universe Hackathon](https://www.healthuniverse.com/apps/tia-xin-ydt)
 
 ## Setting up the environment
 To set up the environment, first create the environment: `conda create --name op_assistant`.
