@@ -31,7 +31,7 @@ def get_response():
 
 def main():
     if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-3.5-turbo"
+        st.session_state["openai_model"] = "gpt-4-1106-preview"
 
     # load previous messages, or empty list if there are no previous messages
     if "messages" not in st.session_state:
